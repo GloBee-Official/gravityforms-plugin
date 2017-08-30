@@ -1,10 +1,10 @@
-# Using the BitPay plugin for Gravity Forms
+# Using the GloBee plugin for Gravity Forms
 
 ## Prerequisites
 
 * Last Version Tested: 1.8
 
-You must have a BitPay merchant account to use this plugin.  It's free to [sign-up for a BitPay merchant account](https://bitpay.com/start).
+You must have a GloBee merchant account to use this plugin.  It's free to [sign-up for a GloBee merchant account](https://globee.com/).
 
 
 ## Server Requirements
@@ -20,7 +20,7 @@ You must have a BitPay merchant account to use this plugin.  It's free to [sign-
 
 **From Downloadable Archive:**
 
-Visit the [Releases](https://github.com/bitpay/gravityforms-plugin/releases/latest) page of
+Visit the [Releases](https://github.com/GloBee-Official/gravityforms-plugin/releases/latest) page of
 this repository and download the latest version. Once this is done, you can just
 go to Wordpress's Adminstration Panels > Plugins > Add New > Upload Plugin, select the downloaded archive and click Install Now.
 After the plugin is installed, click on Activate.
@@ -45,17 +45,17 @@ Configuration can be done using the Administrator section of Wordpress.
 Once Logged in, you will find the configuration settings under **Forms > Settings > BitPay Payments**.
 Alternatively, you can also get to the configuration settings via Plugins and clicking the Settings link for this plugin.
 
-![BitPay Settings](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/fullSettings2.png "BitPay Settings")
+![GloBee Settings](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/fullSettings2.png "GloBee Settings")
 
-Here your will need to create a [pairing code](https://bitpay.com/api-tokens) using
-your BitPay merchant account. Once you have a Pairing Code, put the code in the
+Here your will need to create a [pairing code](https://globee.com/api-tokens) using
+your GloBee merchant account. Once you have a Pairing Code, put the code in the
 Pairing Code field:
 
 ![Pairing Code field](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/pairingCode2.png "Pairing Code field")
 
 On success, you'll receive a token:
 
-![BitPay Token](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/paired2.png "Bitpay Token")
+![GloBee Token](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/paired2.png "Bitpay Token")
 
 **NOTE:** Pairing Codes are only valid for a short period of time. If it expires
 before you get to use it, you can always create a new one and pair with it.
@@ -64,7 +64,7 @@ before you get to use it, you can always create a new one and pair with it.
 extension will generate public and private keys that are used to identify you
 when using the API.
 
-You are also able to configure how BitPay's IPN (Instant Payment Notifications)
+You are also able to configure how GloBee's IPN (Instant Payment Notifications)
 changes the order in your Gravity Forms store.
 
 ![Invoice Settings](https://raw.githubusercontent.com/aleitner/aleitner.github.io/master/gravityforms/transactionSpeed.png "Invoice Settings")
@@ -78,7 +78,7 @@ Save your changes and you're good to go!
 ## Usage
 
 Once enabled, your customers will be able to pay with Bitcoins. Once
-they checkout they are redirected to a full screen BitPay invoice to pay for
+they checkout they are redirected to a full screen GloBee invoice to pay for
 the order.
 
 As a merchant, the orders in your Gravity Forms store can be treated as any other
@@ -87,7 +87,7 @@ fulfillment.
 
 ## GMP Installation
 
-It is highly recommended you install GMP for this plugin to acheive maximum performance.
+It is highly recommended you install GMP for this plugin to achieve maximum performance.
 
 **Compile PHP with GMP:**
 

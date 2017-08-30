@@ -24,10 +24,10 @@ class GFBitPayAdmin
         if (true === class_exists('GFCommon')) {
             if (version_compare(GFCommon::$version, '1.6.99999', '<')) {
                 // pre-v1.7 settings
-                $this->settingsURL = admin_url('admin.php?page=gf_settings&addon=BitPay+Payments');
+                $this->settingsURL = admin_url('admin.php?page=gf_settings&addon=GloBee+Payments');
             } else {
                 // post-v1.7 settings
-                $this->settingsURL = admin_url('admin.php?page=gf_settings&subview=BitPay+Payments');
+                $this->settingsURL = admin_url('admin.php?page=gf_settings&subview=GloBee+Payments');
             }
         }
 
@@ -70,7 +70,7 @@ class GFBitPayAdmin
             switch ($_GET['page']) {
                 case 'gf_settings':
                     // add our settings page to the Gravity Forms settings menu
-                    RGForms::add_settings_page('BitPay Payments', array($this, 'optionsAdmin'));
+                    RGForms::add_settings_page('GloBee Payments', array($this, 'optionsAdmin'));
                     break;
                 default:
                     // not used
@@ -116,8 +116,8 @@ class GFBitPayAdmin
     public static function addPluginDetailsLinks($links, $file)
     {
         if (true === isset($file) && $file == GFBITPAY_PLUGIN_NAME) {
-            $links[] = '<a href="https://support.bitpay.com">' . __('Get help') . '</a>';
-            $links[] = '<a href="https://www.bitpay.com">' . __('Bitpay.com') . '</a>';
+            $links[] = '<a href="https://support.globee.com">' . __('Get help') . '</a>';
+            $links[] = '<a href="https://www.globee.com">' . __('GloBee.com') . '</a>';
         }
 
         return $links;
@@ -142,7 +142,7 @@ class GFBitPayAdmin
             }
         } else {
             error_log('[ERROR] In GFBitPayAdmin::gformEntryInfo(): Missing or invalid $lead parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $lead parameter in the gformEntryInfo() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $lead parameter in the gformEntryInfo() function.');
         }
     }
 
@@ -157,7 +157,7 @@ class GFBitPayAdmin
             $admin->process();
         } else {
             error_log('[ERROR] In GFBitPayAdmin::optionsAdmin(): Could not create a new GFBitPayOptionsAdmin object.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new GFBitPayOptionsAdmin object.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new GFBitPayOptionsAdmin object.');
         }
     }
 

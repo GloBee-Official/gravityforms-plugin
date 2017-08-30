@@ -82,7 +82,7 @@ class GFBitPayPlugin
 
             if (false === isset($formData) || true === empty($formData)) {
                 error_log('[ERROR] In GFBitPayPlugin::gformValidation(): Could not create a new McryptExtension object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new gformValidation object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new gformValidation object.');
             }
 
             // make sure form hasn't already been submitted / processed
@@ -155,7 +155,7 @@ class GFBitPayPlugin
 
             if (false === isset($bitpay) || true === empty($bitpay)) {
                 error_log('[ERROR] In GFBitPayPlugin::processSinglePayment(): Could not create a new GFBitPayPayment object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new GFBitPayPayment object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new GFBitPayPayment object.');
             }
 
             $bitpay->formId             = $data['form']['id']; // This is the form that the invoice uses
@@ -217,7 +217,7 @@ class GFBitPayPlugin
 
         if (false === isset($formData) || true === empty($formData)) {
             error_log('[ERROR] In GFBitPayPlugin::gformAfterSubmission(): Could not create a new GFBitPayFormData object.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new GFBitPayFormData object.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new GFBitPayFormData object.');
         }
 
         $leadId = $entry['id'];
@@ -370,7 +370,7 @@ class GFBitPayPlugin
         static $messages = array (
             GFBITPAY_ERROR_ALREADY_SUBMITTED => 'Payment has already been submitted and processed.',
             GFBITPAY_ERROR_NO_AMOUNT         => 'This form is missing products or totals',
-            GFBITPAY_ERROR_FAIL              => 'Error processing BitPay transaction',
+            GFBITPAY_ERROR_FAIL              => 'Error processing GloBee transaction',
         );
 
         // default
@@ -467,14 +467,14 @@ function bitpay_callback()
 
             if (false === isset($client) || true === empty($client)) {
                 error_log('[ERROR] In GFBitPayPlugin::bitpay_callback(): Could not create a new Client object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Client object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Client object.');
             }
 
             $adapter = new \Bitpay\Client\Adapter\CurlAdapter();
 
             if (false === isset($adapter) || true === empty($adapter)) {
                 error_log('[ERROR] In GFBitPayPlugin::bitpay_callback(): Could not create a new CurlAdapter object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new CurlAdapter object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new CurlAdapter object.');
             }
 
             if (strpos($json['url'], 'test') === false) {
@@ -485,7 +485,7 @@ function bitpay_callback()
 
             if (false === isset($network) || true === empty($network)) {
                 error_log('[ERROR] In GFBitPayPlugin::bitpay_callback(): Could not create a new network object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new network object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new network object.');
             }
 
             $client->setAdapter($adapter);
@@ -601,7 +601,7 @@ function bitpay_callback()
                         throw new \Exception('[ERROR] In GFBitPayPlugin::bitpay_callback(): GFAPI or RGFormsModel won\'t update lead.');
                     }
 
-                    $message = 'Your transaction is now complete! Thank you for using BitPay!';
+                    $message = 'Your transaction is now complete! Thank you for using GloBee!';
                     $note = 'The transaction is now complete.';
 
                     $wpdb->insert(

@@ -88,17 +88,17 @@ function gravityforms_bitpay_failed_requirements()
 
     // PHP 5.4+ required
     if (true === version_compare(PHP_VERSION, '5.4.0', '<')) {
-       $errors[] = 'Your PHP version is too old. The BitPay payment plugin requires PHP 5.4 or higher to function. Please contact your web server administrator for assistance.';
+       $errors[] = 'Your PHP version is too old. The GloBee payment plugin requires PHP 5.4 or higher to function. Please contact your web server administrator for assistance.';
     }
 
     // Wordpress 3.9+ required
     if (true === version_compare($wp_version, '4.0', '<')) {
-        $errors[] = 'Your WordPress version is too old. The BitPay payment plugin requires Wordpress 3.9 or higher to function. Please contact your web server administrator for assistance.';
+        $errors[] = 'Your WordPress version is too old. The GloBee payment plugin requires Wordpress 3.9 or higher to function. Please contact your web server administrator for assistance.';
     }
 
     // GMP or BCMath required
     if (false === extension_loaded('gmp') && false === extension_loaded('bcmath')) {
-        $errors[] = 'The BitPay payment plugin requires the GMP or BC Math extension for PHP in order to function. Please contact your web server administrator for assistance.';
+        $errors[] = 'The GloBee payment plugin requires the GMP or BC Math extension for PHP in order to function. Please contact your web server administrator for assistance.';
     }
 
     if (false === empty($errors)) {
@@ -289,7 +289,7 @@ function pairing($pairing_code, $client, $sin)
 
     } catch (\Exception $e) {
         $error = $e->getMessage();
-        error_log('[Error] In Bitpay plugin, pairing() function on line ' . $e->getLine() . ', with the error "' . $e->getMessage() . '" .');
+        error_log('[Error] In GloBee plugin, pairing() function on line ' . $e->getLine() . ', with the error "' . $e->getMessage() . '" .');
         throw $e;
     }
 }

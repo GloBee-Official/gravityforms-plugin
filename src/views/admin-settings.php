@@ -1,10 +1,10 @@
 <div class="wrap">
 <h3>BitPay Payments</h3>
 <p style="text-align: left;">
-	This Plugin requires you to set up a BitPay merchant account.
+	This Plugin requires you to set up a GloBee merchant account.
 </p>
 <ul>
-	<li>Navigate to the BitPay <a href="https://bitpay.com/start">Sign-up page.</a></li>
+	<li>Navigate to the BitPay <a href="https://globee.com/start">Sign-up page.</a></li>
 </ul>
 <br/>
 <form action="<?php echo $this->scriptURL; ?>" method="post" id="bitpay-settings-form">

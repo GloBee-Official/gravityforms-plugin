@@ -1,6 +1,6 @@
 <?php
 /**
- * BitPay for Gravity Forms Uninstall
+ * GloBee for Gravity Forms Uninstall
  *
  * @author 		bitpay
  */

@@ -38,7 +38,7 @@ class GFBitPayFormData
     {
         if (false === isset($form) || true === empty($form)) {
             error_log('[ERROR] In GFBitPayFormData::__construct(): Missing or invalid $form parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::__construct() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::__construct() function.');
         }
 
         // check for last page
@@ -59,7 +59,7 @@ class GFBitPayFormData
     {
         if (false === isset($form) || true === empty($form)) {
             error_log('[ERROR] In GFBitPayFormData::loadForm(): Missing or invalid $form parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::loadForm() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::loadForm() function.');
         }
 
         foreach ($form['fields'] as &$field) {
@@ -147,12 +147,12 @@ class GFBitPayFormData
     {
         if (false === isset($form) || true === empty($form)) {
             error_log('[ERROR] In GFBitPayFormData::getProductPrice(): Missing or invalid $form parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::getProductPrice() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::getProductPrice() function.');
         }
 
         if (false === isset($field) || true === empty($field)) {
             error_log('[ERROR] In GFBitPayFormData::getProductPrice(): Missing or invalid $field parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $field parameter in the GFBitPayFormData::getProductPrice() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $field parameter in the GFBitPayFormData::getProductPrice() function.');
         }
 
         $price = 0;
@@ -233,12 +233,12 @@ class GFBitPayFormData
     {
         if (false === isset($form) || true === empty($form)) {
             error_log('[ERROR] In GFBitPayFormData::getShipping(): Missing or invalid $form parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::getShipping() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $form parameter in the GFBitPayFormData::getShipping() function.');
         }
 
         if (false === isset($field) || true === empty($field)) {
             error_log('[ERROR] In GFBitPayFormData::getShipping(): Missing or invalid $field parameter.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Missing or invalid $field parameter in the GFBitPayFormData::getShipping() function.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Missing or invalid $field parameter in the GFBitPayFormData::getShipping() function.');
         }
 
         $shipping = 0;

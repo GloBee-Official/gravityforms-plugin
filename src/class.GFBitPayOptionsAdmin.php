@@ -104,7 +104,7 @@ class GFBitPayOptionsAdmin
 
         if (false === isset($this->frm) || true === empty($this->frm)) {
             error_log('[ERROR] In GFBitPayOptionsAdmin::process(): Could not create a new GFBitPayOptionsForm object.');
-            throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new GFBitPayOptionsForm object.');
+            throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new GFBitPayOptionsForm object.');
         }
 
         if ($this->frm->isFormPost()) {

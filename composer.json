@@ -1,13 +1,19 @@
 {
-    "name": "bitpay/gravityforms",
-    "description": "BitPay payment plugin for gravityforms",
+    "name": "GloBee-Official/gravityforms",
+    "description": "GloBee payment plugin for gravityforms",
     "type": "gravityforms-plugin",
     "keywords": ["gravityforms","wordpress","plugin","payment","ecommerce","bitcoin","bitpay"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/GloBee-Official/php-bitpay-client.git"
+        }
+    ],
     "support": {
-        "email": "support@bitpay.com",
-        "issues": "https://github.com/bitpay/gravityforms-plugin/issues",
-        "source": "https://github.com/bitpay/gravityforms-plugin"
+        "email": "support@globee.com",
+        "issues": "https://github.com/GloBee-Official/magento2-plugin/issues",
+        "source": "https://github.com/GloBee-Official/magento2-plugin"
     },
     "minimum-stability": "stable",
     "authors": [
@@ -17,9 +23,6 @@
             "homepage": "https://bitpay.com/integrations"
         }
     ],
-    "require": {
-        "bitpay/php-client": "dev-master@dev"
-    },
     "require-dev": {
         "phpmd/phpmd": "*",
         "phpdocumentor/phpdocumentor": "*",

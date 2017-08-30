@@ -60,7 +60,7 @@ class GFBitPayPayment
 
             if (false === isset($mcrypt_ext) || true === empty($mcrypt_ext)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new McryptExtension object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new McryptExtension object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new McryptExtension object.');
             }
 
             $fingerprint = substr(sha1(sha1(__DIR__)), 0, 24);
@@ -82,7 +82,7 @@ class GFBitPayPayment
 
             if (false === isset($adapter) || true === empty($adapter)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new CurlAdapter object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new CurlAdapter object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new CurlAdapter object.');
             }
 
             /**
@@ -92,7 +92,7 @@ class GFBitPayPayment
 
             if (false === isset($buyer) || true === empty($buyer)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new Buyer object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Buyer object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Buyer object.');
             }
 
             // name
@@ -154,7 +154,7 @@ class GFBitPayPayment
 
             if (false === isset($item) || true === empty($item)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new Item object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Item object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Item object.');
             }
 
             // price
@@ -168,7 +168,7 @@ class GFBitPayPayment
 
             if (false === isset($invoice) || true === empty($invoice)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new Invoice object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Invoice object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Invoice object.');
             }
 
             // Add the item to the invoice
@@ -189,7 +189,7 @@ class GFBitPayPayment
 
             if (false === isset($currency) || true === empty($currency)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new Currency object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Currency object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Currency object.');
             }
 
             $currency->setCode(GFCommon::get_currency());
@@ -221,7 +221,7 @@ class GFBitPayPayment
 
             if (false === isset($client) || true === empty($client)) {
                 $this->bpLog('[ERROR] In GFBitPayPayment::processPayment(): Could not create a new Client object.');
-                throw new \Exception('An error occurred in the BitPay Payment plugin: Could not create a new Client object.');
+                throw new \Exception('An error occurred in the GloBee Payment plugin: Could not create a new Client object.');
             }
 
             $client->setAdapter($adapter);
@@ -246,7 +246,7 @@ class GFBitPayPayment
 
             header('Location: '. $invoice->getUrl());
         } catch (\Exception $e) {
-            error_log('[Error] In Bitpay plugin, form_bitpay() function on line ' . $e->getLine() . ', with the error "' . $e->getMessage() . '" .');
+            error_log('[Error] In GloBee plugin, form_bitpay() function on line ' . $e->getLine() . ', with the error "' . $e->getMessage() . '" .');
             throw $e;
         }
     }

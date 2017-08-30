@@ -32,7 +32,7 @@
     >
 
     <testsuites>
-        <testsuite name="BitPay Project Test Suite">
+        <testsuite name="GloBee Project Test Suite">
             <directory>../tests/*Test.php</directory>
         </testsuite>
     </testsuites>

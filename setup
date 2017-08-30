@@ -16,7 +16,7 @@ else
        composer install --no-dev
 fi
 
-echo "Building BitPay Plugin Directory..."
+echo "Building GloBee Plugin Directory..."
 mkdir bitpay-gravityforms-plugin
 mkdir bitpay-gravityforms-plugin/lib
 cp -vr src/* bitpay-gravityforms-plugin
