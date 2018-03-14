@@ -78,8 +78,8 @@
     $('#bitpay_api_token_form').on('change', '.bitpay-pairing__network', function (e) {
 
       // Helper urls
-      var Livenet = 'https://bitpay.com/api-tokens';
-      var Testnet = 'https://test.bitpay.com/api-tokens';
+      var Livenet = 'https://globee.com/api-tokens';
+      var Testnet = 'https://test.globee.com/api-tokens';
 
       if ($('.bitpay-pairing__network').val() === 'Livenet') {
         $('.bitpay-pairing__link').attr('href', Livenet).html(Livenet);

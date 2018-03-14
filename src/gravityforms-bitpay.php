@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: Gravity Forms BitPay Payments
-Plugin URI:  https://github.com/bitpay/gravityforms-plugin
-Description: Integrates Gravity Forms with BitPay payment gateway.
+Plugin Name: Gravity Forms GloBee Payments
+Plugin URI:  https://github.com/GloBee-Official/gravityforms-plugin
+Description: Integrates Gravity Forms with GloBee payment gateway.
 Version:     2.0.3
-Author:      Rich Morgan & Alex Leitner (integrations@bitpay.com)
-Author URI:  https://www.bitpay.com
+Author:      GloBee (integrations@globee.com) forked from Rich Morgan & Alex Leitner (integrations@bitpay.com)
+Author URI:  https://globee.com
 */
 
 /**
