@@ -6,7 +6,7 @@
     "license": "MIT",
     "repositories": [
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://github.com/GloBee-Official/php-bitpay-client.git"
         }
     ],
@@ -23,6 +23,9 @@
             "homepage": "https://bitpay.com/integrations"
         }
     ],
+    "require": {
+        "paybee/php-client": "dev-master"
+    },
     "require-dev": {
         "phpmd/phpmd": "*",
         "phpdocumentor/phpdocumentor": "*",
